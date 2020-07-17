@@ -1,0 +1,103 @@
+{% import "../partials/_helper.twig" as helper %}
+
+<div class="content-page tabcontent" id="testTab">
+	<div class="content-code"></div>
+	<div class="content">
+		<div class="overflow-hidden content-section">
+			<h1>Test Transacsions</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</div>
+		<div class="overflow-hidden content-section">
+			<h2>Get List</h2>
+			<pre><code>
+#Request Example
+GET <script>document.write(path)</script>test
+
+Result Example:
+{
+	{
+		"id": 1,
+		"name": "test",
+		"status": "testStatus"
+	}
+	{
+		"id": 2,
+		"name": "test",
+		"status": "testStatus"
+	}
+	{
+		"id": 3,
+		"name": "test",
+		"status": "testStatus"
+	}
+}
+</code></pre>
+			<p>For the list get, you need to make a GET call to the URL below :
+				<br>
+				{{ helper.apiUrl('test') }}
+			</p>
+		</div>
+		<div class="overflow-hidden content-section">
+			<h2>Adding</h2>
+			<pre><code>
+#Request Example
+POST <script>document.write(path)</script>test
+{
+	"id": 1,
+	"name": "test",
+	"status": "testStatus"
+}
+
+Reusult Example:
+{
+	"message": "OK"
+}
+</code></pre>
+			<p>For the add transaction, you need to make a POST call to the URL below :
+				<br>
+				{{ helper.apiUrl('test') }}
+			</p>
+		</div>
+		<div class="overflow-hidden content-section">
+			<h2>Update</h2>
+			<pre><code>
+#Request Example
+POST <script>document.write(path)</script>test
+{
+	"id": 1,
+	"name": "test",
+	"status": "testStatus"
+}
+
+Reusult Example:
+{
+	"message": "OK"
+}
+</code></pre>
+			<p>For the update transaction, you need to make a PUT call to the URL below :
+				<br>
+				{{ helper.apiUrl('test') }}
+			</p>
+		</div>
+		<div class="overflow-hidden content-section">
+			<h2>Delete</h2>
+			<pre><code>
+#Request Example
+POST <script>document.write(path)</script>test
+{
+	"id": 1,
+}
+
+Reusult Example:
+{
+	"message": "OK"
+}
+</code></pre>
+			<p>For the delete transaction, you need to make a DELETE call to the URL below :
+				<br>
+				{{ helper.apiUrl('test') }}
+			</p>
+		</div>
+	</div>
+	<div class="content-code"></div>
+</div>
