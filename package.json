@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.js -p $PORT",
     "start:dev": "nodemon app.js"
   },
   "repository": {
