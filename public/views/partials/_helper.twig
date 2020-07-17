@@ -1,9 +1,0 @@
-{% macro menuLink(label,tabName,activeClass) %}
-	<li class="tablinks {{ activeClass ? 'active': '' }}" onclick="openCity(event, '{{ tabName }}')">
-		<a>{{ label }}</a>
-	</li>
-{% endmacro %}
-
-{% macro apiUrl(params, request) %}
-		<code class="higlighted"><script>document.write(path)</script>{{ params }}</code>		
-{% endmacro %}

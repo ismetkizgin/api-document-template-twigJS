@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>API - Documentation</title>
+    <meta name="description" content="">
+    <meta name="author" content="İsmet Kizgin">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500|Source+Code+Pro:300" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" media="all">
+    <script>
+        hljs.initHighlightingOnLoad();
+        var path = window.location;
+    </script>
+</head>
+
+<body>
+
+    <div class="left-menu" id="mySidebar">
+        <div class="content-logo">
+            <img alt="Api Document Template Project" title="Api Document Template Project" src="assets/images/logo.png"
+                height="32" />
+            <span>API Documentation</span>
+        </div>
+        <div class="content-menu">
+            <ul class="tab">
+                <li class="tablinks active" onclick="openCity(event, 'tabInstallation')">
+                    <a>Installation</a>
+                </li>
+                <li class="tablinks" onclick="openCity(event, 'tabTest')">
+                    <a>Test Transactions</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="content-logo" id="header-response">
+            <div class="slidbar-button">
+                <a id="openNav" onclick="slideBar_open()">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+            <div class="header-logo">
+                <img alt="Api Document Template Project" title="Api Document Template Project"
+                    src="assets/images/logo.png" height="32" />
+                <span>API Documentation</span>
+            </div>
+        </div>
+
+        <div class="content-page tabcontent" id="tabInstallation" style="display: block;">
+            <div class="content-code"></div>
+            <div class="content">
+                <div class="overflow-hidden content-section">
+                    <h1>Get started</h1>
+                    <pre>API Domain
+<script>document.write(path)</script></pre>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.</p>
+                </div>
+                <div class="overflow-hidden content-section">
+                    <h1>Project Publishing Instructions</h1>
+                    <p>The project can be published in two different ways.</p>
+                    <p>&emsp;1- Docker<br>&emsp;2- NPM</p>
+                    <h2>Installation with Docker</h2>
+                    <pre><code>#deploy project with docker
+$ docker-compose up
+                
+#install docker database backup
+$ cat &#60;sql_filename&#62; | docker exec -i &#60;container_name&#62; mysql -u root --password=root &#60;database_name&#62;</code></pre>
+                    <p>To publish the project on Docker, go to the project directory and write the following codes;<br>
+                    </p>
+                    <br>
+                    <h2>Installation with NPM</h2>
+                    <pre><code>#package install
+$ npm install
+        
+#project start
+$ npm start</code></pre>
+                    <p>To publish the project in NPM, go to the project directory and write the following codes;</p>
+                </div>
+                <div class="overflow-hidden content-section">
+                    <h1>Running the project as a developer</h1>
+                    <pre><code>#package install
+$ npm install
+        
+#project start
+$ npm run start:dev</code></pre>
+                    <p>As a developer, to start the project and do the test operations, first go to the project
+                        directory and install the packages, then give the necessary command to start the mode.</p>
+                </div>
+            </div>
+            <div class="content-code"></div>
+        </div>
+
+        <div class="content-page tabcontent" id="tabTest">
+            <div class="content-code"></div>
+            <div class="content">
+                <div class="overflow-hidden content-section">
+                    <h1>Test Transacsions</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.</p>
+                </div>
+                <div class="overflow-hidden content-section">
+                    <h2>Get List</h2>
+                    <pre><code>
+#Request Example
+GET <script>document.write(path)</script>test
+        
+Result Example:
+{
+    {
+        "id": 1,
+        "name": "test",
+        "status": "testStatus"
+    }
+    {
+        "id": 2,
+        "name": "test",
+        "status": "testStatus"
+    }
+    {
+        "id": 3,
+        "name": "test",
+        "status": "testStatus"
+    }
+}
+        </code></pre>
+                    <p>For the list get, you need to make a GET call to the URL below :
+                        <br>
+                        <code class="higlighted"><script>document.write(path)</script>test</code>
+                    </p>
+                </div>
+                <div class="overflow-hidden content-section">
+                    <h2>Adding</h2>
+                    <pre><code>
+#Request Example
+POST <script>document.write(path)</script>test
+{
+    "id": 1,
+    "name": "test",
+    "status": "testStatus"
+}
+        
+Reusult Example:
+{
+    "message": "OK"
+}
+        </code></pre>
+                    <p>For the add transaction, you need to make a POST call to the URL below :
+                        <br>
+                        <code class="higlighted"><script>document.write(path)</script>test</code>
+                    </p>
+                </div>
+                <div class="overflow-hidden content-section">
+                    <h2>Update</h2>
+                    <pre><code>
+#Request Example
+POST <script>document.write(path)</script>test
+{
+    "id": 1,
+    "name": "test",
+    "status": "testStatus"
+}
+        
+Reusult Example:
+{
+    "message": "OK"
+}
+        </code></pre>
+                    <p>For the update transaction, you need to make a PUT call to the URL below :
+                        <br>
+                        <code class="higlighted"><script>document.write(path)</script>test</code>
+                    </p>
+                </div>
+                <div class="overflow-hidden content-section">
+                    <h2>Delete</h2>
+                    <pre><code>
+#Request Example
+POST <script>document.write(path)</script>test
+{
+    "id": 1,
+}
+        
+Reusult Example:
+{
+    "message": "OK"
+}
+        </code></pre>
+                    <p>For the delete transaction, you need to make a DELETE call to the URL below :
+                        <br>
+                        <code class="higlighted"><script>document.write(path)</script>test</code>
+                    </p>
+                </div>
+            </div>
+            <div class="content-code"></div>
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
