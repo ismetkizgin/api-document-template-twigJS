@@ -11,7 +11,7 @@
 			<h2>Get List</h2>
 			<pre><code>
 #Request Example
-GET <script>document.write(path)</script>test
+GET <url id="path">test</url>
 
 Result Example:
 {
@@ -34,14 +34,14 @@ Result Example:
 </code></pre>
 			<p>For the list get, you need to make a GET call to the URL below :
 				<br>
-				{{ helper.apiUrl('test') }}
+				<code class="higlighted" id="path">test</code>
 			</p>
 		</div>
 		<div class="overflow-hidden content-section">
 			<h2>Adding</h2>
 			<pre><code>
 #Request Example
-POST <script>document.write(path)</script>test
+POST <url id="path">test</url>
 {
 	"id": 1,
 	"name": "test",
@@ -55,14 +55,14 @@ Reusult Example:
 </code></pre>
 			<p>For the add transaction, you need to make a POST call to the URL below :
 				<br>
-				{{ helper.apiUrl('test') }}
+				<code class="higlighted" id="path">test</code>
 			</p>
 		</div>
 		<div class="overflow-hidden content-section">
 			<h2>Update</h2>
 			<pre><code>
 #Request Example
-POST <script>document.write(path)</script>test
+PUT <url id="path">test</url>
 {
 	"id": 1,
 	"name": "test",
@@ -76,14 +76,14 @@ Reusult Example:
 </code></pre>
 			<p>For the update transaction, you need to make a PUT call to the URL below :
 				<br>
-				{{ helper.apiUrl('test') }}
+				<code class="higlighted" id="path">test</code>
 			</p>
 		</div>
 		<div class="overflow-hidden content-section">
 			<h2>Delete</h2>
 			<pre><code>
 #Request Example
-POST <script>document.write(path)</script>test
+DELETE <url id="path">test</url>
 {
 	"id": 1,
 }
@@ -95,7 +95,7 @@ Reusult Example:
 </code></pre>
 			<p>For the delete transaction, you need to make a DELETE call to the URL below :
 				<br>
-				{{ helper.apiUrl('test') }}
+				<code class="higlighted" id="path">test</code>
 			</p>
 		</div>
 	</div>
