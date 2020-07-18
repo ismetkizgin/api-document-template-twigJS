@@ -13,10 +13,6 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500|Source+Code+Pro:300" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" media="all">
-    <script>
-        hljs.initHighlightingOnLoad();
-        var path = window.location;
-    </script>
 </head>
 
 <body>
@@ -59,7 +55,7 @@
                 <div class="overflow-hidden content-section">
                     <h1>Get started</h1>
                     <pre>API Domain
-<script>document.write(path)</script></pre>
+<url id="path"></url></pre>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
                         of type and scrambled it to make a type specimen book. It has survived not only five centuries,
@@ -120,7 +116,7 @@ $ npm run start:dev</code></pre>
                     <h2>Get List</h2>
                     <pre><code>
 #Request Example
-GET <script>document.write(path)</script>test
+GET <url id="path">test</url>
         
 Result Example:
 {
@@ -143,14 +139,14 @@ Result Example:
         </code></pre>
                     <p>For the list get, you need to make a GET call to the URL below :
                         <br>
-                        <code class="higlighted"><script>document.write(path)</script>test</code>
+                        <code class="higlighted" id="path">test</code>
                     </p>
                 </div>
                 <div class="overflow-hidden content-section">
                     <h2>Adding</h2>
                     <pre><code>
 #Request Example
-POST <script>document.write(path)</script>test
+POST <url id="path">test</url>
 {
     "id": 1,
     "name": "test",
@@ -164,14 +160,14 @@ Reusult Example:
         </code></pre>
                     <p>For the add transaction, you need to make a POST call to the URL below :
                         <br>
-                        <code class="higlighted"><script>document.write(path)</script>test</code>
+                        <code class="higlighted" id="path">test</code>
                     </p>
                 </div>
                 <div class="overflow-hidden content-section">
                     <h2>Update</h2>
                     <pre><code>
 #Request Example
-POST <script>document.write(path)</script>test
+POST <url id="path">test</url>
 {
     "id": 1,
     "name": "test",
@@ -185,14 +181,14 @@ Reusult Example:
         </code></pre>
                     <p>For the update transaction, you need to make a PUT call to the URL below :
                         <br>
-                        <code class="higlighted"><script>document.write(path)</script>test</code>
+                        <code class="higlighted" id="path">test</code>
                     </p>
                 </div>
                 <div class="overflow-hidden content-section">
                     <h2>Delete</h2>
                     <pre><code>
 #Request Example
-POST <script>document.write(path)</script>test
+POST <url id="path">test</url>
 {
     "id": 1,
 }
@@ -204,7 +200,7 @@ Reusult Example:
         </code></pre>
                     <p>For the delete transaction, you need to make a DELETE call to the URL below :
                         <br>
-                        <code class="higlighted"><script>document.write(path)</script>test</code>
+                        <code class="higlighted" id="path">test</code>
                     </p>
                 </div>
             </div>
@@ -214,6 +210,13 @@ Reusult Example:
     </div>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        let path = window.location;
+        let item = document.querySelectorAll("#path");
+        for (let i = 0; i < item.length; i++) {
+            item[i].innerHTML = path + item[i].innerHTML;
+        }
+    </script>
 </body>
 
 </html>
